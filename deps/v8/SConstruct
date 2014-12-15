@@ -80,7 +80,7 @@ LIBRARY_FLAGS = {
   },
   'gcc': {
     'all': {
-      'CCFLAGS':      ['$DIALECTFLAGS', '$WARNINGFLAGS'],
+      'CCFLAGS':      ['$DIALECTFLAGS', '$WARNINGFLAGS', '-march=armv5t'],
       'CXXFLAGS':     ['-fno-rtti', '-fno-exceptions'],
     },
     'visibility:hidden': {
@@ -1129,7 +1129,7 @@ SIMPLE_OPTIONS = {
   },
   'armeabi': {
     'values': ['hard', 'softfp', 'soft'],
-    'default': 'softfp',
+    'default': 'soft',
     'help': 'generate calling conventiont according to selected ARM EABI variant'
   },
   'mipsabi': {
